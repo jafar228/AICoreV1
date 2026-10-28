@@ -1,0 +1,42 @@
+{
+    "users": [
+        {
+            "name": "jafar",
+            "password": "1234",
+            "birthday": "24/09/2008",
+            "email": "jafar2428.com@gmail.com"
+        },
+        {
+            "name": "ali",
+            "password": "4567",
+            "birthday": "07/07/2008",
+            "email": "alishkabro@gmail.com"
+        },
+        {
+            "name": "gozel",
+            "password": "qwerty",
+            "birthday": "26/05/2006",
+            "email": "~~~~"
+        },
+        {
+            "name": "ashraf",
+            "password": "6789",
+            "birthday": "29/11/2008",
+            "email": "~~~~"
+        },
+        {
+            "name": "allanur",
+            "password": "alik228"
+        },
+        {
+            "name": "selim",
+            "password": "tort",
+            "birthday": "09/09/2007",
+            "email": "support@comfysh.xyz"
+        }
+    ],
+    "settings": {
+        "sound": "ON",
+        "voice": "OFF"
+    }
+}

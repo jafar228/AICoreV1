@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerJaf | Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <header class="brand">
+            <div class="logo">S</div>
+            <h1>Создать аккаунт</h1>
+            <p class="subtitle">Присоединяйся к SerJaf</p>
+        </header>
+
+        {% if error %}
+            <div class="message">{{ error }}</div>
+        {% endif %}
+
+        <form action="/register" method="POST">
+            <div class="field">
+                <label for="username">Имя пользователя</label>
+                <input id="username" name="username"
+                       placeholder="Придумай логин"
+                       autocomplete="username" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Электронная почта</label>
+                <input id="email" name="email" type="email"
+                       placeholder="example@mail.com"
+                       autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Пароль</label>
+                <input id="password" name="password" type="password"
+                       placeholder="Придумай пароль"
+                       autocomplete="new-password" required>
+            </div>
+
+            <div class="field">
+                <label for="birthday">Дата рождения</label>
+                <input id="birthday" name="birthday" type="date" required>
+            </div>
+
+            <button type="submit">Создать аккаунт →</button>
+        </form>
+
+        <footer class="footer">
+            Уже есть аккаунт?
+            <a href="/">Войти</a>
+        </footer>
+    </main>
+    <div class="page-footer">
+        © 2026 SerJaf Server. Все права защищены.
+    </div>
+</body>
+</html>

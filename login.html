@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerJaf | Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <header class="brand">
+            <div class="logo">S</div>
+            <h1>SerJaf</h1>
+            <p class="subtitle">Войди в свой аккаунт</p>
+        </header>
+
+        {% if error %}
+            <div class="message">{{ error }}</div>
+        {% endif %}
+
+        <form action="/login" method="POST">
+            <div class="field">
+                <label for="login">Логин</label>
+                <input id="login" name="login"
+                       placeholder="Введите логин"
+                       autocomplete="username" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Пароль</label>
+                <input id="password" name="password"
+                       type="password"
+                       placeholder="Введите пароль"
+                       autocomplete="current-password" required>
+            </div>
+
+            <button type="submit">Войти →</button>
+        </form>
+
+        <footer class="footer">
+            Нет аккаунта?
+            <a href="/register">Зарегистрироваться</a>
+        </footer>
+    </main>
+    <div class="page-footer">
+        © 2026 SerJaf Server. Все права защищены.
+    </div>
+
+</body>
+</html>
